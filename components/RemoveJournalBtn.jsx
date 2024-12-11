@@ -9,7 +9,7 @@ export default function RemoveJournalBtn({ id }) {
     const handleDelete = async () => {
         const confirmed = confirm("Are you sure you want to delete this journal and all associated topics?");
         if (confirmed) {
-            const res = await fetch(`http://localhost:3000/api/journals/${id}`, {
+            const res = await fetch(`https://cs348.onrender.com/api/journals/${id}`, {
                 method: "DELETE",
             });
             if (res.ok) {

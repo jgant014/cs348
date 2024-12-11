@@ -11,7 +11,7 @@ export default function JournalsList({ onJournalSelect }) {
     useEffect(() => {
         const fetchJournals = async () => {
             try {
-                const res = await fetch("http://localhost:3000/api/journals");
+                const res = await fetch("https://cs348.onrender/api/journals");
                 if (res.ok) {
                     const data = await res.json();
                     setJournals(data.journals);

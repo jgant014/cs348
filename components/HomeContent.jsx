@@ -13,7 +13,7 @@ export default function HomeContent() {
         // Fetch all topics once when component mounts
         const fetchTopics = async () => {
             try {
-                const res = await fetch("http://localhost:3000/api/topics");
+                const res = await fetch("https://cs348.onrender.com/api/topics");
                 const data = await res.json();
                 setAllTopics(data.topics); // Store all topics in state
                 setFilteredTopics(data.topics); // Initially show all topics

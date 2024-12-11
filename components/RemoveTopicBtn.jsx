@@ -9,7 +9,7 @@ export default function RemoveTopicBtn({ id }) {
     const handleDelete = async () => {
         const confirmed = confirm("Are you sure you want to delete this topic?");
         if (confirmed) {
-            const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, { // Using query parameter
+            const res = await fetch(`https://cs348.onrender.com/api/topics?id=${id}`, { // Using query parameter
                 method: "DELETE",
             });
             if (res.ok) {

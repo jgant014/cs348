@@ -17,7 +17,7 @@ export default function AddTopic() {
         // Fetch all journals to populate the dropdown
         const fetchJournals = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/journals');
+                const response = await fetch('https://cs348.onrender.com/api/journals');
                 if (response.ok) {
                     const data = await response.json();
                     setJournals(data.journals); // Assumes API returns journals array
@@ -41,7 +41,7 @@ export default function AddTopic() {
         }
 
         try {
-            const res = await fetch('http://localhost:3000/api/topics', {
+            const res = await fetch('https://cs348.onrender.com/api/topics', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
